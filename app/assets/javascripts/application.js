@@ -11,6 +11,13 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
 //= require activestorage
 //= require turbolinks
+//= require semantic-ui
 //= require_tree .
+
+// wait for dom to load before calling function
+$(document).on('turbolinks:load',function(){
+    $('.ui.dropdown').dropdown();
+})
